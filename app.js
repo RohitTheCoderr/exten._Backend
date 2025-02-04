@@ -1,8 +1,9 @@
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
-require('dotenv').config();
-const { Db_Connection } = require('./config/Db_Connection');
+const express = require("express");
+const cors = require("cors");
+const helmet = require("helmet");
+require("dotenv").config();
+const { Db_Connection } = require("./config/Db_Connection");
+const { mainRoute } = require("./routes/mainRoute");
 
 const app = express();
 
@@ -15,9 +16,12 @@ app.use(express.json());
 Db_Connection();
 
 // Routes
-app.get('/', (req, res) => {
-  res.send('Welcome to the Backend!');
+app.get("/", (req, res) => {
+  res.send("Welcome to the Backend!");
 });
+
+// Routes
+app.use('/api/users', mainRoute);
 
 // Start Server
 const PORT = process.env.PORT || 5000;

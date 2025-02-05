@@ -1,10 +1,11 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
-import dotenv from "dotenv";
 import {mainRoute}  from "./routes/mainRoute.js";
 import { Db_Connection } from './config/Db_Connection.js';
+import dotenv from 'dotenv';
 dotenv.config();
+
 
 
 const app = express();

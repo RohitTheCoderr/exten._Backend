@@ -2,3 +2,72 @@
 [2025-02-05T11:09:54.105Z] INFO: rohit data
 [2025-02-05T11:10:35.786Z] INFO: rohit data
 [2025-02-05T11:10:48.441Z] INFO: rohit data holl
+[2025-02-05T12:19:12.129Z] ERROR: exception occurred at checkAccountExist : {"_original":{},"details":[{"message":"\"value\" must contain at least one of [phoneNumber, email]","path":[],"type":"object.missing","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"label":"value","value":{}}}]}
+[2025-02-05T12:20:41.616Z] ERROR: exception occurred at checkAccountExist : {"_original":{},"details":[{"message":"\"value\" must contain at least one of [phoneNumber, email]","path":[],"type":"object.missing","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"label":"value","value":{}}}]}
+[2025-02-05T12:25:51.127Z] INFO: Request body for validation
+[2025-02-05T12:25:51.134Z] ERROR: exception occurred at checkAccountExist : {"_original":{},"details":[{"message":"\"value\" must contain at least one of [phoneNumber, email]","path":[],"type":"object.missing","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"label":"value","value":{}}}]}
+[2025-02-05T12:28:07.763Z] INFO: Request body for validation
+[2025-02-05T12:28:07.769Z] ERROR: exception occurred at checkAccountExist : {"_original":{},"details":[{"message":"\"value\" must contain at least one of [phoneNumber, email]","path":[],"type":"object.missing","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"label":"value","value":{}}}]}
+[2025-02-05T12:31:53.176Z] INFO: Request body for validation
+[2025-02-05T12:31:53.183Z] INFO: Phone Number:
+[2025-02-05T12:31:53.183Z] INFO: Email:
+[2025-02-05T12:33:01.258Z] INFO: Request body for validation
+[2025-02-05T12:33:01.263Z] INFO: Phone Number:
+[2025-02-05T12:33:01.263Z] INFO: Email:
+[2025-02-05T12:35:17.320Z] INFO: Phone Number:
+[2025-02-05T12:35:17.323Z] INFO: Email:
+[2025-02-05T12:36:41.365Z] INFO: Phone Number:
+[2025-02-05T12:36:41.368Z] INFO: Email:
+[2025-02-05T12:36:41.448Z] ERROR: Error sending OTP: __filename is not defined
+[2025-02-05T12:39:32.092Z] INFO: Phone Number:
+[2025-02-05T12:39:32.096Z] INFO: Email:
+[2025-02-05T12:39:32.175Z] ERROR: Error sending OTP: __filename is not defined
+[2025-02-05T12:42:24.311Z] INFO: Phone Number:
+[2025-02-05T12:42:24.315Z] INFO: Email:
+[2025-02-05T12:42:24.403Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T12:42:39.153Z] INFO: Phone Number:
+[2025-02-05T12:42:39.157Z] INFO: Email:
+[2025-02-05T12:42:39.240Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T12:48:42.857Z] INFO: Phone Number:
+[2025-02-05T12:48:42.860Z] INFO: Email:
+[2025-02-05T12:48:42.954Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T12:56:35.298Z] INFO: Phone Number:
+[2025-02-05T12:56:35.302Z] INFO: Email:
+[2025-02-05T12:56:35.394Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T12:57:22.250Z] INFO: Phone Number:
+[2025-02-05T12:57:22.253Z] INFO: Email:
+[2025-02-05T12:57:22.335Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T12:58:05.012Z] INFO: Phone Number:
+[2025-02-05T12:58:05.015Z] INFO: Email:
+[2025-02-05T12:58:05.107Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T13:02:31.963Z] INFO: Phone Number:
+[2025-02-05T13:02:31.966Z] INFO: Email:
+[2025-02-05T13:02:32.064Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T13:04:41.430Z] INFO: Phone Number:
+[2025-02-05T13:04:41.433Z] INFO: Email:
+[2025-02-05T13:04:41.515Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T13:05:52.205Z] INFO: Phone Number:
+[2025-02-05T13:05:52.208Z] INFO: Email:
+[2025-02-05T13:05:52.285Z] ERROR: Error while sending OTP
+[2025-02-05T13:06:22.533Z] INFO: Phone Number:
+[2025-02-05T13:06:22.537Z] INFO: Email:
+[2025-02-05T13:06:22.633Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T13:10:57.695Z] INFO: Phone Number:
+[2025-02-05T13:10:57.697Z] INFO: Email:
+[2025-02-05T13:10:57.884Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T13:12:52.940Z] INFO: Phone Number:
+[2025-02-05T13:12:52.953Z] INFO: Email:
+[2025-02-05T13:12:54.125Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T13:14:54.930Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T13:19:19.751Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T13:26:36.718Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T13:32:11.426Z] ERROR: exception occurred at checkAccountExist : {}
+[2025-02-05T13:35:16.370Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T13:37:16.606Z] INFO: OTP sent successfully...
+[2025-02-05T13:38:01.445Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T13:41:10.056Z] INFO: OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env
+[2025-02-05T13:51:56.466Z] INFO: OTP sent successfully...
+[2025-02-05T13:55:15.034Z] INFO: OTP sent successfully...
+[2025-02-05T13:59:15.640Z] ERROR: exception occurred at checkAccountExist : {"_original":{},"details":[{"message":"\"value\" must contain at least one of [phoneNumber, email]","path":[],"type":"object.missing","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"label":"value","value":{}}}]}
+[2025-02-05T13:59:16.681Z] ERROR: exception occurred at checkAccountExist : {"_original":{},"details":[{"message":"\"value\" must contain at least one of [phoneNumber, email]","path":[],"type":"object.missing","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"label":"value","value":{}}}]}
+[2025-02-05T13:59:51.390Z] INFO: OTP sent successfully...

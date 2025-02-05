@@ -1,6 +1,5 @@
 import otpModel from "../../models/userModels/otpModel.js";
 import { sendOtp } from "../../services/library/otpless.js";
-
 import sendOTPOnEmail from "../../services/library/mailOTP.js";
 import logger from "../../logger.js";
 
@@ -8,26 +7,30 @@ const sendOtpMiddleware = async (req, res) => {
   try {
     const { email, phoneNumber } = req.body;
 
-    if (!email && !phoneNumber) {
-      return res.status(400).json({ message: "Email or phone number is required." });
-    }
-
-    let mailOtp, result;
-
-    if (email) {
-      mailOtp = Math.floor(1000 + Math.random() * 9000);
-      result = await sendOTPOnEmail({
-        to: email,
-        subject: "Verify Your Email Account",
-        html: `
-          <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <h2>User OTP Verification</h2>
-          <p>Your OTP for verification: <strong>${mailOtp}</strong></p>
-          <p>Valid for 10 minutes.</p>
-          </div>
-        `,
-      });
-    }
+ console.log("heloo rohit phoneuber");
+ 
+ if (!email && !phoneNumber) {
+   return res.status(400).json({ message: "Email or phone number is required." });
+  }
+  
+  let mailOtp, result;
+  
+  if (email) {
+    mailOtp = Math.floor(1000 + Math.random() * 9000);
+    result = await sendOTPOnEmail({
+      to: email,
+      subject: "Verify Your Email Account",
+      html: `
+      <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+      <h2>User OTP Verification</h2>
+      <p>Your OTP for verification: <strong>${mailOtp}</strong></p>
+      <p>Valid for 10 minutes.</p>
+      </div>
+      `,
+    });
+  }
+  
+  console.log("heloo phoneuber");
 
     if (phoneNumber) {
       result = await sendOtp(phoneNumber, "WHATSAPP");

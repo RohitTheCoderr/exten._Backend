@@ -1,20 +1,28 @@
 // In otpless.js, change the export to a named export
 import logger from "../../logger.js";
 import otppless from "otpless-node-js-auth-sdk";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const { sendOTP, verifyOTP } = otppless;
 
-const clientId = process.env.OTPLESS_CLIENT_ID || "";
-const secretId = process.env.OTPLESS_CLIENT_SECRET || "";
-const otpExpiryTime = process.env.OTPLESS_EXPIRY_TIME || "";
-const otpLength = process.env.OTPLESS_LENGTH || "";
+const clientId = process.env.MY_OTPLESS_CLIENT_ID || "";
+const secretId = process.env.MY_OTPLESS_CLIENT_SECRET || "";
+const otpExpiryTime = process.env.MY_OTPLESS_EXPIRY_TIME || "";
+const otpLength = process.env.MY_OTPLESS_LENGTH || "";
 
 export async function sendOtp(phoneNumber, channel) {
   try {
+    console.log("rohitjfkajfkaj",process.env.TEST_VAR);
+    
+console.log("clientId",clientId);
+console.log("secretId",secretId);
+console.log("otpExpiryTime",otpExpiryTime);
+console.log("otpLength",otpLength);
+
     if (!clientId || !secretId || !otpExpiryTime || !otpLength) {
       logger.info(
-        "OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env",
-        { __filename }
+        "OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env"
       );
     }
 
@@ -30,6 +38,8 @@ export async function sendOtp(phoneNumber, channel) {
       secretId
     );
 
+    console.log("rohit otpless", otpResponse);
+    
     if (otpResponse && otpResponse.hasOwnProperty("success") && !otpResponse.success) {
       return {
         success: false,
@@ -42,7 +52,7 @@ export async function sendOtp(phoneNumber, channel) {
       message: otpResponse.orderId,
     };
   } catch (err) {
-    logger.error("Error while sending OTP", { __filename });
+    logger.error("Error while sending OTP");
     return {
       success: false,
       message: err.message,
@@ -51,13 +61,13 @@ export async function sendOtp(phoneNumber, channel) {
 }
 
 export async function verifyOtp(phoneNumber, uniqueId, otp) {
-  logger.info("Verify OTP method starts", { __filename });
+  logger.info("Verify OTP method starts");
 
   try {
     if (!clientId || !secretId || !otpExpiryTime || !otpLength) {
       logger.info(
         "OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env",
-        { __filename }
+    
       );
     }
 
@@ -72,7 +82,7 @@ export async function verifyOtp(phoneNumber, uniqueId, otp) {
 
     if (isValidOTP && Object.keys(isValidOTP).length) {
       if (!isValidOTP.isOTPVerified) {
-        logger.error("Invalid OTP", { __filename });
+        logger.error("Invalid OTP");
         return {
           success: false,
           message: "Invalid OTP",
@@ -85,7 +95,7 @@ export async function verifyOtp(phoneNumber, uniqueId, otp) {
       message: "OTP verified",
     };
   } catch (err) {
-    logger.error("Error while verifying OTP", { __filename });
+    logger.error("Error while verifying OTP");
     return {
       success: false,
       message: err.message,

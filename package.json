@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-  "start": "node app.js",
-  "dev": "nodemon app.js"
-   },
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,7 +16,12 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "helmet": "^8.0.0",
-    "mongoose": "^8.9.6"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.6",
+    "nodemailer": "^6.10.0",
+    "otpless-node-js-auth-sdk": "^1.0.8",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"

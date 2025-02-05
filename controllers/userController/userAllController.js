@@ -1,11 +1,13 @@
-import UserModel from "../../models/userModels/userSchema";
+import logger from "../../logger.js";
+import UserModel from "../../models/userModels/userSchema.js";
 
- const checkAccountExist = async (req, res, next) => {
+const checkAccountExist = async (req, res, next) => {
   try {
-    const { email, phone } = req.body;
+    logger.info("rohit data holl",req.body.phoneNumber);
+    const { email, phoneNumber } = req.body;
 
     const user = await UserModel.findOne({
-      $or: [{ email: email }, { phone: phone }],
+      $or: [{ email: email }, { phoneNumber: phoneNumber }],
     });
 
     if (user) {
@@ -18,7 +20,4 @@ import UserModel from "../../models/userModels/userSchema";
   }
 };
 
-
-
-
-export { checkAccountExist , };
+export default checkAccountExist;

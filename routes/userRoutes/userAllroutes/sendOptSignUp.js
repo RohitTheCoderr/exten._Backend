@@ -1,8 +1,11 @@
-import { Router } from "express";
-import { checkAccountExist } from "../../../controllers/userController/userAllController";
-import { sendOtpMiddleware } from "../../../middleware/userOtpmiddleware/OtpMiddleware";
-const router = Router()
-router.route("/")
-    .post(checkAccountExist, sendOtpMiddleware)
+import express from "express";
+import checkAccountExist from "../../../controllers/userController/userAllController.js";
+import sendOtpMiddleware from "../../../middleware/userOtpmiddleware/OtpMiddleware.js";
 
-export {router as sendSignUpOTPRoute}
+const router = express.Router();
+
+// Define the route
+router.route("/").post(checkAccountExist, sendOtpMiddleware);
+
+// Export the router as a named export
+export const sendOptSignUp = router;

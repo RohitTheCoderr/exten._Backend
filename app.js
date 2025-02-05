@@ -1,9 +1,11 @@
-const express = require("express");
-const cors = require("cors");
-const helmet = require("helmet");
-require("dotenv").config();
-const { Db_Connection } = require("./config/Db_Connection");
-const { mainRoute } = require("./routes/mainRoute");
+import express from "express";
+import cors from "cors";
+import helmet from "helmet";
+import dotenv from "dotenv";
+import {mainRoute}  from "./routes/mainRoute.js";
+import { Db_Connection } from './config/Db_Connection.js';
+dotenv.config();
+
 
 const app = express();
 
@@ -13,12 +15,7 @@ app.use(helmet());
 app.use(express.json());
 
 // Connect to Database
-Db_Connection();
-
-// Routes
-app.get("/", (req, res) => {
-  res.send("Welcome to the Backend!");
-});
+Db_Connection()
 
 // Routes
 app.use('/api/users', mainRoute);

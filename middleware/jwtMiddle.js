@@ -1,6 +1,7 @@
 import { StatusCodes } from "http-status-codes";
 import logger from "../logger.js";
 import {jwtGetToken} from "../services/library/jwt/jwtToken.js"
+import { jwtVerifyToken } from "../services/library/jwt/varifyJwtToken.js";
 
 // Generate token middleware
 export const generateToken = (req, res, next) => {
@@ -40,8 +41,6 @@ export const generateToken = (req, res, next) => {
 export const verifyToken = (req, res, next) => {
   try {
     logger.info("Token verification starts");
-
-    console.log("rohit varified ");
 
     const authHeader = req.headers.authorization;
     if (authHeader && authHeader.startsWith("Bearer ")) {

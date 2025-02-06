@@ -73,7 +73,6 @@ export const createMyLead = async (req, res) => {
   }
 };
 
-
 export const deleteMyLead = async (req, res) => {
   console.log("my lead id", req.params);
   
@@ -94,5 +93,23 @@ export const deleteMyLead = async (req, res) => {
     res.status(StatusCodes.OK).json({ success:true, message: "Lead deleted successfully" });
   } catch (error) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({success:false, message: "Error deleting lead", data:{}});
+  }
+};
+
+
+
+export const updateMyLead = async (req, res) => {
+  const { id } = req.params;
+  const updateData = req.body;
+  
+  try {
+    const updatedLead = await leadModel.findByIdAndUpdate( { _id: id, userId: req.userId}, { $set: updateData }, { new: true });
+    if (!updatedLead) return res
+    .status(StatusCodes.NOT_FOUND)
+    .json({ success:false, message: "Lead not found or unauthorized", data:{} });
+
+    res.status(StatusCodes.OK).json({ success:true, message: "Lead updated successfully", data:{updatedLead} });
+  } catch (error) {
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({success:false, message: "Error updating lead", data:{}});
   }
 };

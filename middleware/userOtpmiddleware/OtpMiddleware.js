@@ -1,16 +1,15 @@
 import otpModel from "../../models/userModels/otpModel.js";
 import { sendOtp, verifyOtp } from "../../services/library/otpless.js";
-import sendOTPOnEmail from "../../services/library/mailOTP.js";
-// import logger from "../../logger.js";
 import { StatusCodes } from "http-status-codes";
 import { SendOtpValidator, VerifyOtpValidator } from "../../schema_validation/userData/login_signupvalidate.js";
 import logger from "../../logger.js";
+import sendOTPOnEmail from "../../services/library/mailOTP.js";
 
 export const sendOtpMiddleware = async (req, res) => {
   try {
     const { email, phoneNumber } = req.body;
     
-    console.log("heloo rohit phoneuber");
+    console.log("heloo rohit form sendOtpMiddleware", req.body);
 
     if (!email && !phoneNumber) {
       return res
@@ -18,13 +17,19 @@ export const sendOtpMiddleware = async (req, res) => {
         .json({success: false, message: "Email or phone number is required." });
     }
 
+    console.log("sendOtpMiddleware before sendotp validator",phoneNumber, email );
     
-    await SendOtpValidator.validateAsync({ phoneNumber, email })
+   const hello= await SendOtpValidator.validateAsync({ phoneNumber, email })
+
+console.log("after validate",hello, "==>", phoneNumber, email );
+
 
     let mailOtp, result;
 
     if (email) {
       mailOtp = Math.floor(1000 + Math.random() * 9000);
+      console.log("in mail block", email);
+      
       result = await sendOTPOnEmail({
         to: email,
         subject: "Verify Your Email Account",
@@ -38,9 +43,14 @@ export const sendOtpMiddleware = async (req, res) => {
       });
     }
 
+    console.log("after email checking in sendOtpMiddleware", phoneNumber, email);
+    
     if (phoneNumber) {
       result = await sendOtp(phoneNumber, "WHATSAPP");
     }
+
+console.log("before success in sendOtpMiddleware", phoneNumber, email);
+
 
     if (result?.success) {
       logger.info("OTP sent successfully...");
@@ -50,12 +60,6 @@ export const sendOtpMiddleware = async (req, res) => {
         let expiresAt = new Date();
         expiresAt.setMinutes(expiresAt.getMinutes() + 10);
 
-        // await otpModel.findOneAndUpdate(
-        //   { email },
-        //   { mailOtp, expiresAt },
-        //   { upsert: true }
-        // );
-        
         if (await otpModel.findOne({ email })) {
           await otpModel.findOneAndUpdate({ email }, { mailOtp, expiresAt })
         }
@@ -71,15 +75,11 @@ export const sendOtpMiddleware = async (req, res) => {
         data: { otpID }
       });
     } else {
-      // return res.status(500).json({
-      //   success: false,
-      //   message: result?.message || "Error sending OTP",
-      // });
       return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ success: false, message: "OTP not generated" })
 
     }
   } catch (error) {
-    logger.error(`Error sending OTP: ${error.message}`);
+    // logger.error(`Error sending OTP: ${error.message}`);
     return res.status(500).json({
       success: false,
       message: "Error sending OTP",
@@ -108,14 +108,11 @@ console.log("for varification", req.body);
     }
       console.log("after check", req.body);
       console.log("after check", otpID);
-
-
-        
      
     await VerifyOtpValidator.validateAsync({ phoneNumber, email, otp, otpID })
     let result;
-      //// for using email time
 
+      //// for using email time
       if (email) {
         const data = await otpModel.findOne({ email }, { mailOtp: 1 });
         logger.info(`email data is ${data}`);
@@ -127,10 +124,12 @@ console.log("for varification", req.body);
           };
           await otpModel.findOneAndDelete({ email });
         }
+
+        console.log("check equality otp to otpMail");
+        
       }
 
-
-
+      ///// for phoneNumber time
       if (phoneNumber) {
         if (!otpID) {
           res
@@ -145,7 +144,6 @@ console.log("for varification", req.body);
       }
 
       // check from my side result is successfull or not
-
       if (result?.success) {
         logger.info(`${result?.message}`);
         delete req.body.otp;
@@ -163,4 +161,3 @@ console.log("for varification", req.body);
   }
 };
 
-// export default sendOtpMiddleware;

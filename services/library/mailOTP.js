@@ -1,5 +1,7 @@
 import nodemailer from "nodemailer";
 import logger from "../../logger.js";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const user = process.env.EMAIL_USERNAME;
 const pass = process.env.EMAIL_APP_PASS;
@@ -23,6 +25,8 @@ const generateTransporter = () => {
 
 async function sendOTPOnEmail({ to, subject, html }) {
   try {
+    console.log("in mailOTP lib", to, subject, html);
+    
     const transporter = generateTransporter();
     await transporter.sendMail({
       from: 'Shop@Ease.com',
@@ -35,7 +39,7 @@ async function sendOTPOnEmail({ to, subject, html }) {
       message: "OTP sent to your email address",
     };
   } catch (err) {
-    logger.error(`Error while sending OTP email: ${err.message}`, { __filename });
+    logger.error(`Error while sending OTP email: ${err.message}`);
     throw err;
   }
 }

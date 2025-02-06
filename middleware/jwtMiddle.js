@@ -1,10 +1,5 @@
-// const { StatusCodes } = require("http-status-codes");
-
 import { StatusCodes } from "http-status-codes";
 import logger from "../logger.js";
-
-// const logger = require("../logger");
-// const { jwtGetToken } = require("../services/library/jwt/jwtToken.js");
 import {jwtGetToken} from "../services/library/jwt/jwtToken.js"
 
 // Generate token middleware
@@ -42,34 +37,34 @@ export const generateToken = (req, res, next) => {
 
 
 // Verify token middleware
-// export const verifyToken = (req, res, next) => {
-//   try {
-//     logger.info("Token verification starts");
+export const verifyToken = (req, res, next) => {
+  try {
+    logger.info("Token verification starts");
 
-//     console.log("rohit varified ");
+    console.log("rohit varified ");
 
-//     const authHeader = req.headers.authorization;
-//     if (authHeader && authHeader.startsWith("Bearer ")) {
-//       const token = authHeader.split(" ")[1];
-//       const decodeToken = jwtVerifyToken(token);
-//       req.userId = decodeToken.userId;
-//       logger.info(`Token verification ended.`);
-//       if (req.userId) {
-//         return next();
-//       }
-//       throw new Error("jwt token not verified");
-//     } else {
-//       res.status(StatusCodes.UNAUTHORIZED).json({
-//         success: false,
-//         message: "Authorization header missing or malformed",
-//       });
-//     }
-//   } catch (error) {
-//     logger.error(`Token verification error ${error}`);
-//     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
-//       success: false,
-//       message: "Failed to verify token",
-//     });
-//   }
-// };
+    const authHeader = req.headers.authorization;
+    if (authHeader && authHeader.startsWith("Bearer ")) {
+      const token = authHeader.split(" ")[1];
+      const decodeToken = jwtVerifyToken(token);
+      req.userId = decodeToken.userId;
+      logger.info(`Token verification ended.`);
+      if (req.userId) {
+        return next();
+      }
+      throw new Error("jwt token not verified");
+    } else {
+      res.status(StatusCodes.UNAUTHORIZED).json({
+        success: false,
+        message: "Authorization header missing or malformed",
+      });
+    }
+  } catch (error) {
+    logger.error(`Token verification error ${error}`);
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
+      success: false,
+      message: "Failed to verify token",
+    });
+  }
+};
 

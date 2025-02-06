@@ -21,4 +21,3 @@ import logger from "../../../logger.js";
           throw new Error('Token generation failed');
         }
 }
-// export { jwtGetToken };

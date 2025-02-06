@@ -223,3 +223,153 @@
 [2025-02-06T06:03:11.925Z] INFO: token generation starts.
 [2025-02-06T06:03:11.927Z] INFO: generateToken ends
 [2025-02-06T06:03:46.744Z] ERROR: exception occurred at checkAccountExist : {"_original":{"phoneNumber":"+919654853181","email":"aakumar66333@gmail.com"},"details":[{"message":"Provide either Phone number or Email, but not both or neither","path":[],"type":"object.xor","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"present":["phoneNumber","email"],"presentWithLabels":["phoneNumber","email"],"label":"value","value":{"phoneNumber":"+919654853181","email":"aakumar66333@gmail.com"}}}]}
+[2025-02-06T06:31:07.863Z] INFO: login start
+[2025-02-06T06:31:08.035Z] INFO: user data {
+  _id: new ObjectId('67a44fc3d987837074cf11c9'),
+  password: '$2b$10$a8jb3OCHifUrEc/VIWUM4uU2cyhoDLWU9TDnVPQwqJtlOryKca9My'
+}
+[2025-02-06T06:31:08.141Z] INFO: Starting generateToken...
+[2025-02-06T06:31:08.142Z] INFO: token generation starts.
+[2025-02-06T06:31:08.149Z] INFO: generateToken ends
+[2025-02-06T06:41:17.435Z] INFO: login start
+[2025-02-06T06:41:17.513Z] INFO: user data {
+  _id: new ObjectId('67a44fc3d987837074cf11c9'),
+  password: '$2b$10$a8jb3OCHifUrEc/VIWUM4uU2cyhoDLWU9TDnVPQwqJtlOryKca9My'
+}
+[2025-02-06T06:41:17.620Z] INFO: Starting generateToken...
+[2025-02-06T06:41:17.621Z] INFO: token generation starts.
+[2025-02-06T06:41:17.625Z] INFO: generateToken ends
+[2025-02-06T08:18:26.601Z] ERROR: exception occurred at loginController : {}
+[2025-02-06T08:26:58.412Z] INFO: check user {
+  _id: new ObjectId('67a44fc3d987837074cf11c9'),
+  name: 'rohit',
+  phoneNumber: '+919654853181',
+  __v: 0
+}
+[2025-02-06T08:26:59.650Z] INFO: OTP sent successfully...
+[2025-02-06T08:27:21.235Z] INFO: for otp varification 
+[2025-02-06T08:27:21.242Z] INFO: Verify OTP method starts
+[2025-02-06T08:27:22.969Z] INFO: OTP verified
+[2025-02-06T08:27:22.972Z] INFO: password change start at passwordChangeController {"password":"@@123456","phoneNumber":"+919654853181"}
+[2025-02-06T08:27:23.376Z] INFO: Starting generateToken...
+[2025-02-06T08:27:23.377Z] INFO: token generation starts.
+[2025-02-06T08:27:23.398Z] INFO: generateToken ends
+[2025-02-06T08:27:42.487Z] ERROR: exception occurred at loginController : {}
+[2025-02-06T08:28:23.267Z] ERROR: exception occurred at loginController : {}
+[2025-02-06T08:32:18.688Z] INFO: login start
+[2025-02-06T08:32:18.936Z] INFO: user data {
+  _id: new ObjectId('67a44fc3d987837074cf11c9'),
+  password: '$2b$10$Sc3/T2bm9xFp9xmUOus1aeji3f91ljLxhhLFdJ62TI6FxxMIg7Ukq'
+}
+[2025-02-06T08:32:19.060Z] INFO: Starting generateToken...
+[2025-02-06T08:32:19.061Z] INFO: token generation starts.
+[2025-02-06T08:32:19.070Z] INFO: generateToken ends
+[2025-02-06T08:33:29.060Z] INFO: login start
+[2025-02-06T08:33:29.530Z] INFO: user data {
+  _id: new ObjectId('67a44fc3d987837074cf11c9'),
+  password: '$2b$10$Sc3/T2bm9xFp9xmUOus1aeji3f91ljLxhhLFdJ62TI6FxxMIg7Ukq'
+}
+[2025-02-06T08:33:29.641Z] INFO: Starting generateToken...
+[2025-02-06T08:33:29.642Z] INFO: token generation starts.
+[2025-02-06T08:33:29.646Z] INFO: generateToken ends
+[2025-02-06T08:33:51.823Z] INFO: login start
+[2025-02-06T08:34:00.165Z] INFO: login start
+[2025-02-06T08:35:04.473Z] INFO: login start
+[2025-02-06T08:35:20.378Z] INFO: check user {
+  _id: new ObjectId('67a45021d987837074cf11d2'),
+  name: 'aryan',
+  email: 'aakumar66333@gmail.com',
+  __v: 0
+}
+[2025-02-06T08:35:20.418Z] ERROR: Error sending OTP: __filename is not defined
+[2025-02-06T08:41:09.175Z] INFO: check user {
+  _id: new ObjectId('67a45021d987837074cf11d2'),
+  name: 'aryan',
+  email: 'aakumar66333@gmail.com',
+  __v: 0
+}
+[2025-02-06T08:41:09.225Z] ERROR: Error sending OTP: __filename is not defined
+[2025-02-06T08:55:01.719Z] INFO: check user {
+  _id: new ObjectId('67a45021d987837074cf11d2'),
+  name: 'aryan',
+  email: 'aakumar66333@gmail.com',
+  __v: 0
+}
+[2025-02-06T09:04:52.855Z] INFO: check user {
+  _id: new ObjectId('67a45021d987837074cf11d2'),
+  name: 'aryan',
+  email: 'aakumar66333@gmail.com',
+  __v: 0
+}
+[2025-02-06T09:06:28.235Z] INFO: check user {
+  _id: new ObjectId('67a45021d987837074cf11d2'),
+  name: 'aryan',
+  email: 'aakumar66333@gmail.com',
+  __v: 0
+}
+[2025-02-06T09:06:28.289Z] ERROR: Error while sending OTP email: connect ECONNREFUSED 127.0.0.1:587
+[2025-02-06T09:12:47.665Z] INFO: check user {
+  _id: new ObjectId('67a45021d987837074cf11d2'),
+  name: 'aryan',
+  email: 'aakumar66333@gmail.com',
+  __v: 0
+}
+[2025-02-06T09:12:47.926Z] ERROR: Error while sending OTP email: connect ECONNREFUSED 127.0.0.1:587
+[2025-02-06T09:15:31.577Z] ERROR: Error while sending OTP email: connect ECONNREFUSED 127.0.0.1:587
+[2025-02-06T09:19:36.942Z] INFO: OTP sent successfully...
+[2025-02-06T09:20:46.883Z] INFO: for otp varification 
+[2025-02-06T09:20:47.195Z] INFO: email data is { _id: new ObjectId('67a47ea9ebff624da0176c65'), mailOtp: '4890' }
+[2025-02-06T09:23:22.904Z] INFO: OTP sent successfully...
+[2025-02-06T09:24:54.194Z] INFO: for otp varification 
+[2025-02-06T09:24:54.401Z] INFO: email data is { _id: new ObjectId('67a47ea9ebff624da0176c65'), mailOtp: '6170' }
+[2025-02-06T09:24:54.600Z] INFO: otp varification is successfully done
+[2025-02-06T09:24:54.602Z] ERROR: exception occurred at signUpController : {}
+[2025-02-06T09:36:51.226Z] INFO: OTP sent successfully...
+[2025-02-06T09:37:53.598Z] INFO: for otp varification 
+[2025-02-06T09:37:53.899Z] INFO: email data is { _id: new ObjectId('67a482b303954b0f18d741a7'), mailOtp: '9821' }
+[2025-02-06T09:37:54.305Z] INFO: otp varification is successfully done
+[2025-02-06T09:37:54.307Z] INFO: signUp data {"name":"aryan","password":"@12345","email":"aakumar66333@gmail.com"}
+[2025-02-06T09:37:54.722Z] INFO: user created {
+  name: 'aryan',
+  password: '$2b$10$hgopEvIw2pvOV7K.NN9gae3CL1V3mKtl.GMP7w.bsQkKvAwWS33XK',
+  email: 'aakumar66333@gmail.com',
+  _id: new ObjectId('67a482f203954b0f18d741ac'),
+  __v: 0
+}
+[2025-02-06T09:37:54.723Z] INFO: Starting generateToken...
+[2025-02-06T09:37:54.725Z] INFO: token generation starts.
+[2025-02-06T09:37:54.735Z] INFO: generateToken ends
+[2025-02-06T09:38:26.237Z] INFO: login start
+[2025-02-06T09:38:26.461Z] INFO: user data {
+  _id: new ObjectId('67a44fc3d987837074cf11c9'),
+  password: '$2b$10$Sc3/T2bm9xFp9xmUOus1aeji3f91ljLxhhLFdJ62TI6FxxMIg7Ukq'
+}
+[2025-02-06T09:38:33.728Z] INFO: login start
+[2025-02-06T09:38:34.038Z] INFO: user data {
+  _id: new ObjectId('67a44fc3d987837074cf11c9'),
+  password: '$2b$10$Sc3/T2bm9xFp9xmUOus1aeji3f91ljLxhhLFdJ62TI6FxxMIg7Ukq'
+}
+[2025-02-06T09:38:34.138Z] INFO: Starting generateToken...
+[2025-02-06T09:38:34.139Z] INFO: token generation starts.
+[2025-02-06T09:38:34.143Z] INFO: generateToken ends
+[2025-02-06T09:38:56.420Z] INFO: check user {
+  _id: new ObjectId('67a482f203954b0f18d741ac'),
+  name: 'aryan',
+  email: 'aakumar66333@gmail.com',
+  __v: 0
+}
+[2025-02-06T09:39:04.756Z] INFO: OTP sent successfully...
+[2025-02-06T09:39:50.625Z] INFO: for otp varification 
+[2025-02-06T09:39:51.046Z] INFO: email data is { _id: new ObjectId('67a4833803954b0f18d741b2'), mailOtp: '3405' }
+[2025-02-06T09:39:51.251Z] INFO: otp varification is successfully done
+[2025-02-06T09:39:51.254Z] INFO: password change start at passwordChangeController {"password":"@@12345","email":"aakumar66333@gmail.com"}
+[2025-02-06T09:39:56.984Z] INFO: Starting generateToken...
+[2025-02-06T09:39:56.985Z] INFO: token generation starts.
+[2025-02-06T09:39:56.987Z] INFO: generateToken ends
+[2025-02-06T09:42:11.750Z] INFO: check user {
+  _id: new ObjectId('67a44fc3d987837074cf11c9'),
+  name: 'rohit',
+  phoneNumber: '+919654853181',
+  __v: 0
+}
+[2025-02-06T09:42:13.205Z] INFO: OTP sent successfully...

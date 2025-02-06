@@ -5,5 +5,4 @@ import { loginController } from "../../../controllers/userController/userAllCont
 const router = express.Router();
 router.route("/").post(loginController, generateToken)
 
-// Export the router as a named export
 export const loginRoute = router;

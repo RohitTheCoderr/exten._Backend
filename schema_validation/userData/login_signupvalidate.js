@@ -7,8 +7,6 @@ const phoneNumber = Joi.string()
 // .pattern(/[6-9]{1}[0-9]{9}/)
 .messages({
   "string.empty": "Phone number cannot be empty.",
-  // "string.length": "Phone number must be exactly 10 digits long.",
-  // "string.pattern.base": "Phone number is invalid.",
 })
 
 const email = Joi.string().email().messages({
@@ -25,15 +23,11 @@ const otpID = Joi.string().allow("", null).messages({
   'string.base': 'otpID must be a string',
 })
 
-
-
-
 const password = Joi.string()
 // .pattern(new RegExp("^[a-zA-Z0-9@]{3,30}$"))
 .required()
 .messages({
   'any.required': 'password is required',
-  // "string.pattern.base":'Password must contain only letters, numbers, or "@" and be between 3 and 30 characters long.',
 })
 
 // Schema for sign-up validation
@@ -72,16 +66,20 @@ const validateVerifyOtp = Joi.object({
 
 
 
+// for  password change
+const validateChangePassword = Joi.object({
+  phoneNumber,
+  email,
+  password,
+}).xor('phoneNumber', 'email').messages({
+  'object.xor': 'Provide either Phone number or Email, but not both or neither',
+});
 
 
 
-export const SendOtpValidator = validateSendOtp;
+// export const SendOtpValidator = validateSendOtp;
+export const SendOtpValidator=validateSendOtp;
 export const VerifyOtpValidator=validateVerifyOtp;
-// /////////////
 export const signUpValidator=validateSignUp;
 export const loginValidator=validateLogin;
-// /////////////
-// export const updatePhoneOrEmailValidator=validateEmailOrPhone;
-// export const ChangePasswordValidator=validateChangePassword;
-// export const updateNameValidator=validateName;
-// /////////////
+export const ChangePasswordValidator = validateChangePassword;

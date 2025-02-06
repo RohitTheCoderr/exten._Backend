@@ -13,13 +13,6 @@ const otpLength = process.env.MY_OTPLESS_LENGTH || "";
 
 export async function sendOtp(phoneNumber, channel) {
   try {
-    console.log("rohitjfkajfkaj",process.env.TEST_VAR);
-    
-console.log("clientId",clientId);
-console.log("secretId",secretId);
-console.log("otpExpiryTime",otpExpiryTime);
-console.log("otpLength",otpLength);
-
     if (!clientId || !secretId || !otpExpiryTime || !otpLength) {
       logger.info(
         "OTPLESS_CLIENT_ID OR OTPLESS_CLIENT_SECRET OR OTPLESS_EXPIRY_TIME OR OTPLESS_LENGTH may not be in .env"
@@ -38,8 +31,6 @@ console.log("otpLength",otpLength);
       secretId
     );
 
-    console.log("rohit otpless", otpResponse);
-    
     if (otpResponse && otpResponse.hasOwnProperty("success") && !otpResponse.success) {
       return {
         success: false,

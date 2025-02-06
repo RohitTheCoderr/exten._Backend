@@ -1,5 +1,6 @@
 import Joi from "joi";
 
+const name=Joi.string().min(3).required("name is required")
 
 const phoneNumber = Joi.string()
 // .length(10)
@@ -27,22 +28,23 @@ const otpID = Joi.string().allow("", null).messages({
 
 
 
-// const password = Joi.string()
-// // .pattern(new RegExp("^[a-zA-Z0-9@]{3,30}$"))
-// .required()
-// .messages({
-//   'any.required': 'password is required',
-//   // "string.pattern.base":'Password must contain only letters, numbers, or "@" and be between 3 and 30 characters long.',
-// })
+const password = Joi.string()
+// .pattern(new RegExp("^[a-zA-Z0-9@]{3,30}$"))
+.required()
+.messages({
+  'any.required': 'password is required',
+  // "string.pattern.base":'Password must contain only letters, numbers, or "@" and be between 3 and 30 characters long.',
+})
+
 // Schema for sign-up validation
-// const validateSignUp = Joi.object({
-//   name,
-//   phoneNumber,
-//   email,
-//   password,
-// }).xor('phoneNumber', 'email').messages({
-//   'object.xor': 'Provide either Phone number or Email, but not both or neither',
-// });
+const validateSignUp = Joi.object({
+  name,
+  phoneNumber,
+  email,
+  password,
+}).xor('phoneNumber', 'email').messages({
+  'object.xor': 'Provide either Phone number or Email, but not both or neither',
+});
 
 // Schema for login validation
 // const validateLogin = Joi.object({
@@ -76,7 +78,7 @@ const validateVerifyOtp = Joi.object({
 export const SendOtpValidator = validateSendOtp;
 export const VerifyOtpValidator=validateVerifyOtp;
 // /////////////
-// export const signUpValidator=validateSignUp;
+export const signUpValidator=validateSignUp;
 // export const loginValidator=validateLogin;
 // /////////////
 // export const updatePhoneOrEmailValidator=validateEmailOrPhone;

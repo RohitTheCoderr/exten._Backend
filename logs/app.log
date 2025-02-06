@@ -71,3 +71,55 @@
 [2025-02-05T13:59:15.640Z] ERROR: exception occurred at checkAccountExist : {"_original":{},"details":[{"message":"\"value\" must contain at least one of [phoneNumber, email]","path":[],"type":"object.missing","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"label":"value","value":{}}}]}
 [2025-02-05T13:59:16.681Z] ERROR: exception occurred at checkAccountExist : {"_original":{},"details":[{"message":"\"value\" must contain at least one of [phoneNumber, email]","path":[],"type":"object.missing","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"label":"value","value":{}}}]}
 [2025-02-05T13:59:51.390Z] INFO: OTP sent successfully...
+[2025-02-05T17:04:14.415Z] INFO: OTP sent successfully...
+[2025-02-05T17:08:55.933Z] INFO: for otp varification 
+[2025-02-05T17:10:33.417Z] INFO: for otp varification 
+[2025-02-05T17:11:16.639Z] INFO: OTP sent successfully...
+[2025-02-05T17:11:39.918Z] INFO: for otp varification 
+[2025-02-06T02:21:17.110Z] INFO: OTP sent successfully...
+[2025-02-06T02:25:37.605Z] INFO: OTP sent successfully...
+[2025-02-06T02:28:16.123Z] INFO: OTP sent successfully...
+[2025-02-06T02:56:17.612Z] INFO: OTP sent successfully...
+[2025-02-06T02:56:17.620Z] ERROR: Error sending OTP: otpID is not defined
+[2025-02-06T02:57:12.292Z] INFO: OTP sent successfully...
+[2025-02-06T02:59:17.962Z] INFO: for otp varification 
+[2025-02-06T03:00:06.213Z] INFO: for otp varification 
+[2025-02-06T03:16:32.119Z] INFO: OTP sent successfully...
+[2025-02-06T03:18:15.319Z] INFO: OTP sent successfully...
+[2025-02-06T03:19:14.142Z] INFO: for otp varification 
+[2025-02-06T03:22:54.077Z] INFO: OTP sent successfully...
+[2025-02-06T03:23:23.299Z] INFO: for otp varification 
+[2025-02-06T03:25:50.734Z] INFO: for otp varification 
+[2025-02-06T03:25:50.739Z] INFO: for otp varification 
+[2025-02-06T03:27:05.299Z] INFO: for otp varification 
+[2025-02-06T03:29:22.011Z] INFO: OTP sent successfully...
+[2025-02-06T03:29:57.485Z] INFO: for otp varification 
+[2025-02-06T03:31:31.841Z] INFO: for otp varification 
+[2025-02-06T03:37:36.205Z] INFO: OTP sent successfully...
+[2025-02-06T03:37:58.200Z] INFO: for otp varification 
+[2025-02-06T03:37:58.206Z] INFO: Verify OTP method starts
+[2025-02-06T03:37:59.736Z] INFO: OTP verified
+[2025-02-06T03:37:59.738Z] INFO: signUp data {"name":"rohit kumar","password":"@12345","phoneNumber":"+919654853181"}
+[2025-02-06T03:37:59.940Z] ERROR: exception occurred at signUpController : {}
+[2025-02-06T03:43:25.190Z] INFO: OTP sent successfully...
+[2025-02-06T03:43:48.951Z] INFO: for otp varification 
+[2025-02-06T03:43:48.957Z] INFO: Verify OTP method starts
+[2025-02-06T03:43:49.544Z] INFO: OTP verified
+[2025-02-06T03:43:49.546Z] INFO: signUp data {"name":"rohit","password":"@12345","phoneNumber":"+919654853181"}
+[2025-02-06T03:43:49.752Z] ERROR: error occurred at ReferenceError: key is not defined
+[2025-02-06T03:43:49.772Z] ERROR: exception occurred at signUpController : {"errors":{"password":{"name":"ValidatorError","message":"Path `password` is required.","properties":{"message":"Path `password` is required.","type":"required","path":"password"},"kind":"required","path":"password"}},"_message":"user validation failed","name":"ValidationError","message":"user validation failed: password: Path `password` is required."}
+[2025-02-06T03:45:55.515Z] INFO: OTP sent successfully...
+[2025-02-06T03:46:15.039Z] INFO: for otp varification 
+[2025-02-06T03:46:15.044Z] INFO: Verify OTP method starts
+[2025-02-06T03:46:16.467Z] INFO: OTP verified
+[2025-02-06T03:46:16.468Z] INFO: signUp data {"name":"rohit","password":"@12345","phoneNumber":"+919654853181"}
+[2025-02-06T03:46:16.808Z] INFO: user created {
+  name: 'rohit',
+  password: '$2b$10$HXuM7lAOgfv1WOSi1XB/..7ehun.TSBDs5l5LKbqwd80J1H7i/FJO',
+  phoneNumber: '+919654853181',
+  _id: new ObjectId('67a430887a838d2e80ca185f'),
+  __v: 0
+}
+[2025-02-06T03:46:16.809Z] INFO: Starting generateToken...
+[2025-02-06T03:46:16.810Z] INFO: token generation starts.
+[2025-02-06T03:46:16.826Z] INFO: generateToken ends

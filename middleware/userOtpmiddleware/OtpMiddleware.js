@@ -1,36 +1,42 @@
 import otpModel from "../../models/userModels/otpModel.js";
-import { sendOtp } from "../../services/library/otpless.js";
+import { sendOtp, verifyOtp } from "../../services/library/otpless.js";
 import sendOTPOnEmail from "../../services/library/mailOTP.js";
+// import logger from "../../logger.js";
+import { StatusCodes } from "http-status-codes";
+import { SendOtpValidator, VerifyOtpValidator } from "../../schema_validation/userData/login_signupvalidate.js";
 import logger from "../../logger.js";
 
-const sendOtpMiddleware = async (req, res) => {
+export const sendOtpMiddleware = async (req, res) => {
   try {
     const { email, phoneNumber } = req.body;
+    
+    console.log("heloo rohit phoneuber");
 
- console.log("heloo rohit phoneuber");
- 
- if (!email && !phoneNumber) {
-   return res.status(400).json({ message: "Email or phone number is required." });
-  }
-  
-  let mailOtp, result;
-  
-  if (email) {
-    mailOtp = Math.floor(1000 + Math.random() * 9000);
-    result = await sendOTPOnEmail({
-      to: email,
-      subject: "Verify Your Email Account",
-      html: `
+    if (!email && !phoneNumber) {
+      return res
+        .status(400)
+        .json({success: false, message: "Email or phone number is required." });
+    }
+
+    
+    await SendOtpValidator.validateAsync({ phoneNumber, email })
+
+    let mailOtp, result;
+
+    if (email) {
+      mailOtp = Math.floor(1000 + Math.random() * 9000);
+      result = await sendOTPOnEmail({
+        to: email,
+        subject: "Verify Your Email Account",
+        html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6;">
       <h2>User OTP Verification</h2>
       <p>Your OTP for verification: <strong>${mailOtp}</strong></p>
       <p>Valid for 10 minutes.</p>
       </div>
       `,
-    });
-  }
-  
-  console.log("heloo phoneuber");
+      });
+    }
 
     if (phoneNumber) {
       result = await sendOtp(phoneNumber, "WHATSAPP");
@@ -38,28 +44,39 @@ const sendOtpMiddleware = async (req, res) => {
 
     if (result?.success) {
       logger.info("OTP sent successfully...");
-
+      const otpID = (result?.message)?.startsWith("Otp") ? result?.message : false
+     
       if (mailOtp && email) {
         let expiresAt = new Date();
         expiresAt.setMinutes(expiresAt.getMinutes() + 10);
 
-        await otpModel.findOneAndUpdate(
-          { email },
-          { mailOtp, expiresAt },
-          { upsert: true }
-        );
+        // await otpModel.findOneAndUpdate(
+        //   { email },
+        //   { mailOtp, expiresAt },
+        //   { upsert: true }
+        // );
+        
+        if (await otpModel.findOne({ email })) {
+          await otpModel.findOneAndUpdate({ email }, { mailOtp, expiresAt })
+        }
+        else {
+          await otpModel.create({ email, mailOtp, expiresAt })
+        }
       }
 
       return res.status(200).json({
         success: true,
         message: "OTP sent successfully",
-        otpID: result?.message?.startsWith("Otp") ? result?.message : null,
+        // otpID: result?.message?.startsWith("Otp") ? result?.message : null,
+        data: { otpID }
       });
     } else {
-      return res.status(500).json({
-        success: false,
-        message: result?.message || "Error sending OTP",
-      });
+      // return res.status(500).json({
+      //   success: false,
+      //   message: result?.message || "Error sending OTP",
+      // });
+      return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ success: false, message: "OTP not generated" })
+
     }
   } catch (error) {
     logger.error(`Error sending OTP: ${error.message}`);
@@ -71,86 +88,79 @@ const sendOtpMiddleware = async (req, res) => {
   }
 };
 
-export default sendOtpMiddleware;
+export const verifyOtpMiddleware = async (req, res, next) => {
+  try {
+    logger.info("for otp varification ");
+console.log("for varification", req.body);
+
+    const phoneNumber = req.body?.phoneNumber;
+    const email = req.body?.email;
+    const otp = req.body?.otp;
+    const otpID = req.body?.otpID;
+
+    if (!phoneNumber && !email && !otp) {
+      console.log("after check", req.body);
+      res.status(StatusCodes.BAD_REQUEST).json({
+        success: false,
+        message: "all data like email or phoneNumber and OTP is required",
+        data: {},
+      });
+    }
+      console.log("after check", req.body);
+      console.log("after check", otpID);
+
+
+        
+     
+    await VerifyOtpValidator.validateAsync({ phoneNumber, email, otp, otpID })
+    let result;
+      //// for using email time
+
+      if (email) {
+        const data = await otpModel.findOne({ email }, { mailOtp: 1 });
+        logger.info(`email data is ${data}`);
+
+        if (data?.mailOtp == otp) {
+          result = {
+            success: true,
+            message: "otp varification is successfully done",
+          };
+          await otpModel.findOneAndDelete({ email });
+        }
+      }
 
 
 
+      if (phoneNumber) {
+        if (!otpID) {
+          res
+            .status(StatusCodes.BAD_REQUEST)
+            .json({
+              success: false,
+              message: "please provide OtpID",
+              data: {},
+            });
+        }
+        result = await verifyOtp(phoneNumber, otpID, otp);
+      }
 
-// import { generateOtp, sendOtpToUser } from "../../../services/otpService.js";
-// import logger from "../../logger.js";
-// import otpModel from "../../models/userModels/otpModel.js";
-// import { sendOTPOnEmail } from "../../services/library/mailOTP.js";
-// import { sendOtp } from "../../services/library/otpless.js";
+      // check from my side result is successfull or not
 
-// export const sendOtpMiddleware = async (req, res) => {
-//   try {
-//     const { email, phoneNumber } = req.body;
+      if (result?.success) {
+        logger.info(`${result?.message}`);
+        delete req.body.otp;
+        delete req.body.otpID;
+        return next();
+      } else {
+        res
+          .status(StatusCodes.INTERNAL_SERVER_ERROR)
+          .json({ success: false, message: "OTP not Verified" });
+      }
+    }
+   catch (error) {
+    logger.error(`exception occurred at ${JSON.stringify(error)}`);
+    next(error);
+  }
+};
 
-//     // Validate input
-//     if (!email && !phoneNumber) {
-//       return res
-//         .status(400)
-//         .json({ message: "Email or phone number is required." });
-//     }
-
-//     let result, mailOtp;
-
-//     if (email) {
-//       mailOtp = Math.floor(1000 + Math.random() * 9000);
-//       result = await sendOTPOnEmail({
-//         to: email,
-//         subject: "verify your email account",
-//         html: `
-//       <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-//       <h2>User OTP Verification</h2>
-//       <p>Dear user,</p>
-//       <p>Your OTP for verification : <strong>${mailOtp}</strong></p>
-//       <p>Please enter this code on the website to proceed. This OTP is valid for the next 10 minutes.</p>
-//       <p>If you did not request this, please ignore this message or contact our support team immediately.</p>
-//       <p>Thank you for choosing User!</p>
-//      </div>
-//         `,
-//       });
-//     }
-
-//     if (phoneNumber) {
-//       result = await sendOtp(phoneNumber, "WHATSAPP");
-//       // result = await sendOtp(phoneNumber, "SMS")
-//     }
-
-//     if (result?.success) {
-//       logger.info("OTP send successful...");
-//       const otpID = result?.message?.startsWith("Otp") ? result?.message
-//         : false;
-//       if (mailOtp && email) {
-//         let expiresAt = new Date();
-//         expiresAt.setMinutes(expiresAt.getMinutes() + 10);
-
-//         if (await otpModel.findOne({ email })) {
-//           await otpModel.findOneAndUpdate({ email }, { mailOtp, expiresAt });
-//         } else {
-//           await otpModel.create({ email, mailOtp, expiresAt });
-//         }
-//       }
-
-//       return res
-//         .status(200)
-//         .json({
-//           success: true,
-//           message: "OTP sent successfully",
-//           data: { otpID },
-//         });
-//     } else
-//       return res
-//         .status(500)
-//         .json({
-//           success: false,
-//           message: "Error sending OTP",
-//           error: error.message,
-//         });
-//   } catch (error) {
-//     return res
-//       .status(500)
-//       .json({ message: "Error sending OTP", error: error.message });
-//   }
-// };
+// export default sendOtpMiddleware;

@@ -1,7 +1,7 @@
 import logger from "../../logger.js";
 import UserModel from "../../models/userModels/userSchema.js"
-import { createHashedPassword } from "../../services/library/bcrypt.js";
-import { SendOtpValidator, signUpValidator } from "../../schema_validation/userData/login_signupvalidate.js";
+import { createHashedPassword, verifyHashedPassword } from "../../services/library/bcrypt.js";
+import { loginValidator, SendOtpValidator, signUpValidator } from "../../schema_validation/userData/login_signupvalidate.js";
 import { StatusCodes } from "http-status-codes";
 
 export const checkAccountExist = async (req, res, next) => {
@@ -81,6 +81,36 @@ export const signUpController=async(req,res,next)=>{
     return next(error);
   }
 }
+
+/////////////////////////
+export const loginController= async (req, res, next) => {
+  try {
+    let userData = await loginValidator.validateAsync(req.body);
+    logger.info(`login start`);
+
+    let user;
+    if (userData?.phoneNumber) {
+      user = await UserModel.findOne({ phoneNumber: userData?.phoneNumber }).select({ "password": 1 })
+      logger.info(`user data ${user}`)
+    }
+    else if (userData?.email) {
+      user = await UserModel.findOne({ email: userData?.email }).select({ "password": 1 })
+    }
+
+    if (!user) { res.status(StatusCodes.UNAUTHORIZED).json({ success: false, message: "user not found." }) }
+
+    if (user && (await verifyHashedPassword(userData.password, user.password))) {
+      req.userId = user._id;
+      next()
+    }
+    else {
+      res.status(StatusCodes.UNAUTHORIZED).json({ success: false, message: "wrong password!", data: {} })
+    }
+  } catch (error) {
+    logger.error(`exception occurred at loginController : ${JSON.stringify(error)}`);
+    next(error);
+  }
+};
 
 
 

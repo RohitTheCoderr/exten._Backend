@@ -47,13 +47,13 @@ const validateSignUp = Joi.object({
 });
 
 // Schema for login validation
-// const validateLogin = Joi.object({
-//   phoneNumber,
-//   email,
-//   password,
-// }).xor('phoneNumber', 'email').messages({
-//   'object.xor': 'Provide either Phone number or Email, but not both or neither',
-// });
+const validateLogin = Joi.object({
+  phoneNumber,
+  email,
+  password,
+}).xor('phoneNumber', 'email').messages({
+  'object.xor': 'Provide either Phone number or Email, but not both or neither',
+});
 
 const validateSendOtp = Joi.object({
   phoneNumber,
@@ -79,7 +79,7 @@ export const SendOtpValidator = validateSendOtp;
 export const VerifyOtpValidator=validateVerifyOtp;
 // /////////////
 export const signUpValidator=validateSignUp;
-// export const loginValidator=validateLogin;
+export const loginValidator=validateLogin;
 // /////////////
 // export const updatePhoneOrEmailValidator=validateEmailOrPhone;
 // export const ChangePasswordValidator=validateChangePassword;

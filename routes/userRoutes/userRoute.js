@@ -2,6 +2,7 @@
 import express from "express";
 import { sendOptSignUp } from "./userAllroutes/sendOptSignUp.js";
 import { signUpRoute } from "./userAllroutes/signUpRoute.js";
+import { loginRoute } from "./userAllroutes/loginRoute.js";
 
 // router
 const router = express.Router();
@@ -9,6 +10,7 @@ const router = express.Router();
 // signup login
 router.use("/send_signup_otp", sendOptSignUp);
 router.use("/signup", signUpRoute);
+router.use("/login", loginRoute)
 
 export const userRoute = router;
 

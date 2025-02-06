@@ -123,3 +123,103 @@
 [2025-02-06T03:46:16.809Z] INFO: Starting generateToken...
 [2025-02-06T03:46:16.810Z] INFO: token generation starts.
 [2025-02-06T03:46:16.826Z] INFO: generateToken ends
+[2025-02-06T04:09:02.081Z] INFO: login start
+[2025-02-06T04:09:02.263Z] INFO: user data {
+  _id: new ObjectId('67a430887a838d2e80ca185f'),
+  password: '$2b$10$HXuM7lAOgfv1WOSi1XB/..7ehun.TSBDs5l5LKbqwd80J1H7i/FJO'
+}
+[2025-02-06T04:09:02.370Z] INFO: Starting generateToken...
+[2025-02-06T04:09:02.372Z] INFO: token generation starts.
+[2025-02-06T04:09:02.382Z] INFO: generateToken ends
+[2025-02-06T04:12:05.449Z] INFO: login start
+[2025-02-06T04:12:05.772Z] INFO: user data {
+  _id: new ObjectId('67a430887a838d2e80ca185f'),
+  password: '$2b$10$HXuM7lAOgfv1WOSi1XB/..7ehun.TSBDs5l5LKbqwd80J1H7i/FJO'
+}
+[2025-02-06T04:12:05.870Z] INFO: Starting generateToken...
+[2025-02-06T04:12:05.871Z] INFO: token generation starts.
+[2025-02-06T04:12:05.874Z] INFO: generateToken ends
+[2025-02-06T05:21:18.501Z] INFO: login start
+[2025-02-06T05:21:18.625Z] INFO: user data {
+  _id: new ObjectId('67a430887a838d2e80ca185f'),
+  password: '$2b$10$HXuM7lAOgfv1WOSi1XB/..7ehun.TSBDs5l5LKbqwd80J1H7i/FJO'
+}
+[2025-02-06T05:21:18.719Z] INFO: Starting generateToken...
+[2025-02-06T05:21:18.720Z] INFO: token generation starts.
+[2025-02-06T05:21:18.727Z] INFO: generateToken ends
+[2025-02-06T05:44:04.032Z] INFO: OTP sent successfully...
+[2025-02-06T05:45:09.446Z] INFO: for otp varification 
+[2025-02-06T05:45:09.623Z] INFO: email data is { _id: new ObjectId('67a44c24739f155e77499242'), mailOtp: '8425' }
+[2025-02-06T05:45:09.783Z] INFO: otp varification is successfully done
+[2025-02-06T05:45:09.785Z] INFO: signUp data {"name":"rohit kumar","password":"@54321","email":"rohitkumar9643017@gail.com"}
+[2025-02-06T05:45:10.272Z] INFO: user created {
+  name: 'rohit kumar',
+  password: '$2b$10$NS8OeS6.qwj/kV3U/4Zo0uhII122mzZfzQnEAl.z8xleKC32gd8iS',
+  email: 'rohitkumar9643017@gail.com',
+  _id: new ObjectId('67a44c66739f155e77499247'),
+  __v: 0
+}
+[2025-02-06T05:45:10.273Z] INFO: Starting generateToken...
+[2025-02-06T05:45:10.274Z] INFO: token generation starts.
+[2025-02-06T05:45:10.285Z] INFO: generateToken ends
+[2025-02-06T05:45:45.431Z] INFO: login start
+[2025-02-06T05:45:45.541Z] ERROR: exception occurred at loginController : {"code":"ERR_HTTP_HEADERS_SENT"}
+[2025-02-06T05:45:58.739Z] INFO: login start
+[2025-02-06T05:45:58.992Z] ERROR: exception occurred at loginController : {"code":"ERR_HTTP_HEADERS_SENT"}
+[2025-02-06T05:46:14.959Z] INFO: login start
+[2025-02-06T05:46:15.902Z] ERROR: exception occurred at loginController : {"code":"ERR_HTTP_HEADERS_SENT"}
+[2025-02-06T05:47:31.146Z] INFO: login start
+[2025-02-06T05:47:31.262Z] ERROR: exception occurred at loginController : {"code":"ERR_HTTP_HEADERS_SENT"}
+[2025-02-06T05:47:47.424Z] ERROR: exception occurred at loginController : {"_original":{"password":"@12345","email":"rohitkumar9643017@gmail.com","phoneNumber":"+919654853181"},"details":[{"message":"Provide either Phone number or Email, but not both or neither","path":[],"type":"object.xor","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"present":["phoneNumber","email"],"presentWithLabels":["phoneNumber","email"],"label":"value","value":{"password":"@12345","email":"rohitkumar9643017@gmail.com","phoneNumber":"+919654853181"}}}]}
+[2025-02-06T05:49:39.309Z] ERROR: exception occurred at checkAccountExist : {"_original":{"phoneNumber":"+919654853181","email":"rohitkumar9643017@gmail.com"},"details":[{"message":"Provide either Phone number or Email, but not both or neither","path":[],"type":"object.xor","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"present":["phoneNumber","email"],"presentWithLabels":["phoneNumber","email"],"label":"value","value":{"phoneNumber":"+919654853181","email":"rohitkumar9643017@gmail.com"}}}]}
+[2025-02-06T05:49:47.524Z] ERROR: exception occurred at checkAccountExist : {"_original":{"phoneNumber":"+919654853181","email":"rohitkumar9643017@gmail.com"},"details":[{"message":"Provide either Phone number or Email, but not both or neither","path":[],"type":"object.xor","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"present":["phoneNumber","email"],"presentWithLabels":["phoneNumber","email"],"label":"value","value":{"phoneNumber":"+919654853181","email":"rohitkumar9643017@gmail.com"}}}]}
+[2025-02-06T05:49:53.789Z] ERROR: exception occurred at checkAccountExist : {"_original":{"phoneNumber":"+919654853181","email":"rohitkumar9643017@gmail.com"},"details":[{"message":"Provide either Phone number or Email, but not both or neither","path":[],"type":"object.xor","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"present":["phoneNumber","email"],"presentWithLabels":["phoneNumber","email"],"label":"value","value":{"phoneNumber":"+919654853181","email":"rohitkumar9643017@gmail.com"}}}]}
+[2025-02-06T05:51:36.480Z] ERROR: exception occurred at checkAccountExist : {"_original":{"phoneNumber":"+919654853181","email":"rohitkumar9643017@gmail.com"},"details":[{"message":"Provide either Phone number or Email, but not both or neither","path":[],"type":"object.xor","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"present":["phoneNumber","email"],"presentWithLabels":["phoneNumber","email"],"label":"value","value":{"phoneNumber":"+919654853181","email":"rohitkumar9643017@gmail.com"}}}]}
+[2025-02-06T05:51:45.105Z] ERROR: exception occurred at checkAccountExist : {"_original":{"phoneNumber":"+919654853181","email":"rohitkumar9643017@gmail.com"},"details":[{"message":"Provide either Phone number or Email, but not both or neither","path":[],"type":"object.xor","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"present":["phoneNumber","email"],"presentWithLabels":["phoneNumber","email"],"label":"value","value":{"phoneNumber":"+919654853181","email":"rohitkumar9643017@gmail.com"}}}]}
+[2025-02-06T05:58:16.483Z] INFO: OTP sent successfully...
+[2025-02-06T05:59:30.067Z] INFO: for otp varification 
+[2025-02-06T05:59:30.071Z] INFO: Verify OTP method starts
+[2025-02-06T05:59:31.021Z] INFO: OTP verified
+[2025-02-06T05:59:31.022Z] INFO: signUp data {"name":"rohit","password":"@12345","phoneNumber":"+919654853181"}
+[2025-02-06T05:59:31.330Z] INFO: user created {
+  name: 'rohit',
+  password: '$2b$10$a8jb3OCHifUrEc/VIWUM4uU2cyhoDLWU9TDnVPQwqJtlOryKca9My',
+  phoneNumber: '+919654853181',
+  _id: new ObjectId('67a44fc3d987837074cf11c9'),
+  __v: 0
+}
+[2025-02-06T05:59:31.332Z] INFO: Starting generateToken...
+[2025-02-06T05:59:31.333Z] INFO: token generation starts.
+[2025-02-06T05:59:31.347Z] INFO: generateToken ends
+[2025-02-06T06:00:01.830Z] INFO: OTP sent successfully...
+[2025-02-06T06:01:05.457Z] INFO: for otp varification 
+[2025-02-06T06:01:05.567Z] INFO: email data is { _id: new ObjectId('67a44fe1d987837074cf11cd'), mailOtp: '5877' }
+[2025-02-06T06:01:05.650Z] INFO: otp varification is successfully done
+[2025-02-06T06:01:05.651Z] INFO: signUp data {"name":"aryan","password":"@54321","email":"aakumar66333@gmail.com"}
+[2025-02-06T06:01:05.911Z] INFO: user created {
+  name: 'aryan',
+  password: '$2b$10$Isrd2GqrSwwR2mlTkBO5mePiql15cj6F1v.q0p29DlToItR2vqxRu',
+  email: 'aakumar66333@gmail.com',
+  _id: new ObjectId('67a45021d987837074cf11d2'),
+  __v: 0
+}
+[2025-02-06T06:01:05.912Z] INFO: Starting generateToken...
+[2025-02-06T06:01:05.912Z] INFO: token generation starts.
+[2025-02-06T06:01:05.914Z] INFO: generateToken ends
+[2025-02-06T06:01:37.160Z] INFO: login start
+[2025-02-06T06:01:37.412Z] INFO: Starting generateToken...
+[2025-02-06T06:01:37.412Z] INFO: token generation starts.
+[2025-02-06T06:01:37.414Z] INFO: generateToken ends
+[2025-02-06T06:02:52.239Z] INFO: login start
+[2025-02-06T06:02:52.422Z] INFO: Starting generateToken...
+[2025-02-06T06:02:52.423Z] INFO: token generation starts.
+[2025-02-06T06:02:52.426Z] INFO: generateToken ends
+[2025-02-06T06:03:11.650Z] INFO: login start
+[2025-02-06T06:03:11.817Z] INFO: user data {
+  _id: new ObjectId('67a44fc3d987837074cf11c9'),
+  password: '$2b$10$a8jb3OCHifUrEc/VIWUM4uU2cyhoDLWU9TDnVPQwqJtlOryKca9My'
+}
+[2025-02-06T06:03:11.925Z] INFO: Starting generateToken...
+[2025-02-06T06:03:11.925Z] INFO: token generation starts.
+[2025-02-06T06:03:11.927Z] INFO: generateToken ends
+[2025-02-06T06:03:46.744Z] ERROR: exception occurred at checkAccountExist : {"_original":{"phoneNumber":"+919654853181","email":"aakumar66333@gmail.com"},"details":[{"message":"Provide either Phone number or Email, but not both or neither","path":[],"type":"object.xor","context":{"peers":["phoneNumber","email"],"peersWithLabels":["phoneNumber","email"],"present":["phoneNumber","email"],"presentWithLabels":["phoneNumber","email"],"label":"value","value":{"phoneNumber":"+919654853181","email":"aakumar66333@gmail.com"}}}]}

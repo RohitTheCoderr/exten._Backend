@@ -12,7 +12,9 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));  // for specific frontend url
+app.use(cors());                // for all frontend url
+
 app.use(helmet());
 app.use(express.json());
 

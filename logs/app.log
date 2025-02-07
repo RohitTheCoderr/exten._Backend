@@ -2464,3 +2464,239 @@
 [2025-02-07T06:07:41.292Z] INFO: Token verification starts
 [2025-02-07T06:07:41.293Z] INFO: token validator starts in jwtVerifyToken. 
 [2025-02-07T06:07:41.295Z] INFO: Token verification ended.
+[2025-02-07T06:18:32.630Z] INFO: Token verification starts
+[2025-02-07T06:18:32.634Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:18:32.642Z] INFO: Token verification ended.
+[2025-02-07T06:18:38.121Z] INFO: Token verification starts
+[2025-02-07T06:18:38.122Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:18:38.125Z] INFO: Token verification ended.
+[2025-02-07T06:18:38.522Z] INFO: Token verification starts
+[2025-02-07T06:18:38.523Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:18:38.526Z] INFO: Token verification ended.
+[2025-02-07T06:18:38.930Z] INFO: Token verification starts
+[2025-02-07T06:18:38.932Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:18:38.935Z] INFO: Token verification ended.
+[2025-02-07T06:18:39.093Z] INFO: Token verification starts
+[2025-02-07T06:18:39.094Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:18:39.097Z] INFO: Token verification ended.
+[2025-02-07T06:18:39.178Z] INFO: Token verification starts
+[2025-02-07T06:18:39.179Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:18:39.182Z] INFO: Token verification ended.
+[2025-02-07T06:18:39.281Z] INFO: Token verification starts
+[2025-02-07T06:18:39.283Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:18:39.285Z] INFO: Token verification ended.
+[2025-02-07T06:18:39.537Z] INFO: Token verification starts
+[2025-02-07T06:18:39.539Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:18:39.541Z] INFO: Token verification ended.
+[2025-02-07T06:25:37.479Z] INFO: Token verification starts
+[2025-02-07T06:25:37.481Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:25:37.486Z] INFO: Token verification ended.
+[2025-02-07T06:25:37.590Z] INFO: Token verification starts
+[2025-02-07T06:25:37.591Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:25:37.593Z] INFO: Token verification ended.
+[2025-02-07T06:26:58.771Z] INFO: Token verification starts
+[2025-02-07T06:26:58.772Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:26:58.774Z] INFO: Token verification ended.
+[2025-02-07T06:26:59.069Z] INFO: Token verification starts
+[2025-02-07T06:26:59.070Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:26:59.072Z] INFO: Token verification ended.
+[2025-02-07T06:26:59.272Z] INFO: Token verification starts
+[2025-02-07T06:26:59.273Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:26:59.275Z] INFO: Token verification ended.
+[2025-02-07T06:26:59.476Z] INFO: Token verification starts
+[2025-02-07T06:26:59.477Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:26:59.479Z] INFO: Token verification ended.
+[2025-02-07T06:27:19.749Z] INFO: Token verification starts
+[2025-02-07T06:27:19.750Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:27:19.752Z] INFO: Token verification ended.
+[2025-02-07T06:27:19.957Z] INFO: Token verification starts
+[2025-02-07T06:27:19.958Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:27:19.960Z] INFO: Token verification ended.
+[2025-02-07T06:27:27.761Z] INFO: Token verification starts
+[2025-02-07T06:27:27.762Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:27:27.763Z] INFO: Token verification ended.
+[2025-02-07T06:27:27.945Z] INFO: Token verification starts
+[2025-02-07T06:27:27.945Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:27:27.947Z] INFO: Token verification ended.
+[2025-02-07T06:27:28.756Z] INFO: Token verification starts
+[2025-02-07T06:27:28.757Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:27:28.759Z] INFO: Token verification ended.
+[2025-02-07T06:27:29.105Z] INFO: Token verification starts
+[2025-02-07T06:27:29.106Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:27:29.108Z] INFO: Token verification ended.
+[2025-02-07T06:40:06.057Z] INFO: Token verification starts
+[2025-02-07T06:40:06.061Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:40:06.067Z] INFO: Token verification ended.
+[2025-02-07T06:40:06.342Z] INFO: Token verification starts
+[2025-02-07T06:40:06.343Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:40:06.346Z] INFO: Token verification ended.
+[2025-02-07T06:40:06.485Z] INFO: Token verification starts
+[2025-02-07T06:40:06.486Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:40:06.488Z] INFO: Token verification ended.
+[2025-02-07T06:40:06.762Z] INFO: Token verification starts
+[2025-02-07T06:40:06.763Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:40:06.766Z] INFO: Token verification ended.
+[2025-02-07T06:41:39.362Z] INFO: Token verification starts
+[2025-02-07T06:41:39.363Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:41:39.365Z] INFO: Token verification ended.
+[2025-02-07T06:41:39.759Z] INFO: Token verification starts
+[2025-02-07T06:41:39.763Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:41:39.769Z] INFO: Token verification ended.
+[2025-02-07T06:41:39.948Z] INFO: Token verification starts
+[2025-02-07T06:41:39.949Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:41:39.953Z] INFO: Token verification ended.
+[2025-02-07T06:41:40.152Z] INFO: Token verification starts
+[2025-02-07T06:41:40.153Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:41:40.156Z] INFO: Token verification ended.
+[2025-02-07T06:42:27.384Z] INFO: Token verification starts
+[2025-02-07T06:42:27.385Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:42:27.388Z] INFO: Token verification ended.
+[2025-02-07T06:42:27.722Z] INFO: Token verification starts
+[2025-02-07T06:42:27.723Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:42:27.725Z] INFO: Token verification ended.
+[2025-02-07T06:42:27.872Z] INFO: Token verification starts
+[2025-02-07T06:42:27.873Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:42:27.875Z] INFO: Token verification ended.
+[2025-02-07T06:42:28.078Z] INFO: Token verification starts
+[2025-02-07T06:42:28.079Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:42:28.082Z] INFO: Token verification ended.
+[2025-02-07T06:42:28.283Z] INFO: Token verification starts
+[2025-02-07T06:42:28.284Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:42:28.286Z] INFO: Token verification ended.
+[2025-02-07T06:43:07.093Z] INFO: Token verification starts
+[2025-02-07T06:43:07.093Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:43:07.096Z] INFO: Token verification ended.
+[2025-02-07T06:43:07.369Z] INFO: Token verification starts
+[2025-02-07T06:43:07.371Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:43:07.373Z] INFO: Token verification ended.
+[2025-02-07T06:43:07.620Z] INFO: Token verification starts
+[2025-02-07T06:43:07.621Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:43:07.623Z] INFO: Token verification ended.
+[2025-02-07T06:43:07.810Z] INFO: Token verification starts
+[2025-02-07T06:43:07.811Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:43:07.815Z] INFO: Token verification ended.
+[2025-02-07T06:43:08.026Z] INFO: Token verification starts
+[2025-02-07T06:43:08.027Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:43:08.031Z] INFO: Token verification ended.
+[2025-02-07T06:43:33.629Z] INFO: Token verification starts
+[2025-02-07T06:43:33.632Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:43:33.641Z] ERROR: Exception occurred at validation function JsonWebTokenError: jwt malformed
+[2025-02-07T06:43:33.654Z] ERROR: Token verification error Error: Token validator failed
+[2025-02-07T06:43:55.597Z] INFO: login start
+[2025-02-07T06:43:56.052Z] INFO: Starting generateToken...
+[2025-02-07T06:43:56.054Z] INFO: token generation starts.
+[2025-02-07T06:43:56.059Z] INFO: generateToken ends
+[2025-02-07T06:44:01.613Z] INFO: Token verification starts
+[2025-02-07T06:44:01.616Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:44:01.621Z] INFO: Token verification ended.
+[2025-02-07T06:44:01.863Z] INFO: Token verification starts
+[2025-02-07T06:44:01.864Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:44:01.867Z] INFO: Token verification ended.
+[2025-02-07T06:44:02.009Z] INFO: Token verification starts
+[2025-02-07T06:44:02.010Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:44:02.013Z] INFO: Token verification ended.
+[2025-02-07T06:44:02.293Z] INFO: Token verification starts
+[2025-02-07T06:44:02.294Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:44:02.297Z] INFO: Token verification ended.
+[2025-02-07T06:44:13.967Z] INFO: Token verification starts
+[2025-02-07T06:44:13.971Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:44:13.974Z] INFO: Token verification ended.
+[2025-02-07T06:44:14.174Z] INFO: Token verification starts
+[2025-02-07T06:44:14.175Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:44:14.177Z] INFO: Token verification ended.
+[2025-02-07T06:44:16.000Z] INFO: Token verification starts
+[2025-02-07T06:44:16.001Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:44:16.005Z] INFO: Token verification ended.
+[2025-02-07T06:44:16.218Z] INFO: Token verification starts
+[2025-02-07T06:44:16.219Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:44:16.222Z] INFO: Token verification ended.
+[2025-02-07T06:44:43.451Z] INFO: Token verification starts
+[2025-02-07T06:44:43.454Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:44:43.458Z] INFO: Token verification ended.
+[2025-02-07T06:44:43.920Z] INFO: Token verification starts
+[2025-02-07T06:44:43.921Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:44:43.923Z] INFO: Token verification ended.
+[2025-02-07T06:44:44.000Z] INFO: Token verification starts
+[2025-02-07T06:44:44.001Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:44:44.005Z] INFO: Token verification ended.
+[2025-02-07T06:44:44.226Z] INFO: Token verification starts
+[2025-02-07T06:44:44.227Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:44:44.231Z] INFO: Token verification ended.
+[2025-02-07T06:44:44.480Z] INFO: Token verification starts
+[2025-02-07T06:44:44.481Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:44:44.484Z] INFO: Token verification ended.
+[2025-02-07T06:45:46.571Z] INFO: Token verification starts
+[2025-02-07T06:45:46.572Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:45:46.574Z] INFO: Token verification ended.
+[2025-02-07T06:46:44.173Z] INFO: Token verification starts
+[2025-02-07T06:46:44.174Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:46:44.176Z] INFO: Token verification ended.
+[2025-02-07T06:46:44.952Z] INFO: Token verification starts
+[2025-02-07T06:46:44.953Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:46:44.955Z] INFO: Token verification ended.
+[2025-02-07T06:46:45.313Z] INFO: Token verification starts
+[2025-02-07T06:46:45.314Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:46:45.318Z] INFO: Token verification ended.
+[2025-02-07T06:46:46.456Z] INFO: Token verification starts
+[2025-02-07T06:46:46.458Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:46:46.461Z] INFO: Token verification ended.
+[2025-02-07T06:46:46.993Z] INFO: Token verification starts
+[2025-02-07T06:46:46.994Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:46:46.997Z] INFO: Token verification ended.
+[2025-02-07T06:47:01.201Z] INFO: Token verification starts
+[2025-02-07T06:47:01.205Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:47:01.208Z] INFO: Token verification ended.
+[2025-02-07T06:47:01.540Z] INFO: Token verification starts
+[2025-02-07T06:47:01.541Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:47:01.545Z] INFO: Token verification ended.
+[2025-02-07T06:47:01.906Z] INFO: Token verification starts
+[2025-02-07T06:47:01.907Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:47:01.910Z] INFO: Token verification ended.
+[2025-02-07T06:47:02.508Z] INFO: Token verification starts
+[2025-02-07T06:47:02.510Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:47:02.513Z] INFO: Token verification ended.
+[2025-02-07T06:47:02.726Z] INFO: Token verification starts
+[2025-02-07T06:47:02.727Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:47:02.730Z] INFO: Token verification ended.
+[2025-02-07T06:48:22.597Z] INFO: Token verification starts
+[2025-02-07T06:48:22.598Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:48:22.600Z] INFO: Token verification ended.
+[2025-02-07T06:48:23.050Z] INFO: Token verification starts
+[2025-02-07T06:48:23.051Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:48:23.054Z] INFO: Token verification ended.
+[2025-02-07T06:48:23.218Z] INFO: Token verification starts
+[2025-02-07T06:48:23.219Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:48:23.223Z] INFO: Token verification ended.
+[2025-02-07T06:48:23.375Z] INFO: Token verification starts
+[2025-02-07T06:48:23.376Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:48:23.379Z] INFO: Token verification ended.
+[2025-02-07T06:48:23.782Z] INFO: Token verification starts
+[2025-02-07T06:48:23.783Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:48:23.786Z] INFO: Token verification ended.
+[2025-02-07T06:48:59.203Z] INFO: Token verification starts
+[2025-02-07T06:48:59.204Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:48:59.207Z] INFO: Token verification ended.
+[2025-02-07T06:48:59.916Z] INFO: Token verification starts
+[2025-02-07T06:48:59.918Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:48:59.922Z] INFO: Token verification ended.
+[2025-02-07T06:49:00.082Z] INFO: Token verification starts
+[2025-02-07T06:49:00.083Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:49:00.087Z] INFO: Token verification ended.
+[2025-02-07T06:49:00.285Z] INFO: Token verification starts
+[2025-02-07T06:49:00.286Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:49:00.288Z] INFO: Token verification ended.
+[2025-02-07T06:49:00.490Z] INFO: Token verification starts
+[2025-02-07T06:49:00.491Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:49:00.493Z] INFO: Token verification ended.
+[2025-02-07T06:54:03.598Z] INFO: Token verification starts
+[2025-02-07T06:54:03.599Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:54:03.601Z] INFO: Token verification ended.
+[2025-02-07T06:54:03.812Z] INFO: Token verification starts
+[2025-02-07T06:54:03.813Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:54:03.815Z] INFO: Token verification ended.
+[2025-02-07T06:54:04.015Z] INFO: Token verification starts
+[2025-02-07T06:54:04.015Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:54:04.019Z] INFO: Token verification ended.
+[2025-02-07T06:54:04.220Z] INFO: Token verification starts
+[2025-02-07T06:54:04.221Z] INFO: token validator starts in jwtVerifyToken. 
+[2025-02-07T06:54:04.224Z] INFO: Token verification ended.

@@ -6,7 +6,7 @@ const leadSchema = new Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   status: { type: String, enum: ['New', 'Contacted', 'Closed'], default: 'New' },
-  phoneNumber: String,
+  phoneNumber: { type: String, required: true, unique: true },
 },{ timestamps: true });
 
 const leadModel = model('Lead', leadSchema);

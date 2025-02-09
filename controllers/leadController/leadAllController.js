@@ -19,14 +19,13 @@ export const getMyLeads = async (req, res) => {
 };
 
 // Add/ create lead
-
 export const createMyLead = async (req, res) => {
   const { name, email, phoneNumber,status } = req.body;
 
-  if (!name || !email) {
+  if (!name || !email ||!phoneNumber ||!status) {
     return res.status(StatusCodes.BAD_REQUEST).json({
       success: false,
-      message: 'Name and Email are required',
+      message: 'All fields are required',
       data: {},
     });
   }
@@ -36,17 +35,24 @@ export const createMyLead = async (req, res) => {
   let Lead;
 
   //// for checking lead is already exits or not //////
-  if (leadData?.phoneNumber) {
-    Lead = await leadModel.findOne({ phoneNumber: leadData?.phoneNumber })
-  }
-  else if (leadData?.email) {
-    Lead = await leadModel.findOne({ email: leadData?.email })
-  }
+  // if (leadData?.phoneNumber) {
+  //   Lead = await leadModel.findOne({ phoneNumber: leadData?.phoneNumber })
+  // }
+  // else if (leadData?.email) {
+  //   Lead = await leadModel.findOne({ email: leadData?.email })
+  // }
 
-  if (Lead) {
-    return res.status(StatusCodes.BAD_REQUEST).json({ success: false, message: "user already exist." })
-  }
+   Lead = await leadModel.find({
+    userId: req.userId,
+    $or: [
+      { phoneNumber: leadData.phoneNumber },
+      { email: leadData.email },
+    ],
+  });
 
+  if (Lead.length > 0) {
+    return res.status(StatusCodes.BAD_REQUEST).json({ success: false, message:"A lead with this email or phone number already exists" })
+  }
 
   try {
     const newLead = new leadModel({
@@ -56,26 +62,25 @@ export const createMyLead = async (req, res) => {
       status: status || 'New',
       userId: req.userId, // Ensure this matches the schema field
     });
-
-    await newLead.save();
+     await newLead.save();
 
     res.status(StatusCodes.CREATED).json({
       success: true,
-      message: 'Lead is created successfully',
+      message: 'Lead is created successfully ',
       data: { lead: newLead },
     });
   } catch (error) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
       success: false,
-      message: 'Error adding lead',
+      // message: error,
+      message: 'Error adding lead ',
       data: {},
     });
   }
 };
 
+// update any perticular lead
 export const deleteMyLead = async (req, res) => {
-  console.log("my lead id", req.params);
-  
   const { id } = req.params;
 
   try {
@@ -96,13 +101,30 @@ export const deleteMyLead = async (req, res) => {
   }
 };
 
-
-
+// delete any perticular lead
 export const updateMyLead = async (req, res) => {
   const { id } = req.params;
   const updateData = req.body;
   
   try {
+
+    const existingLead = await leadModel.findOne({
+      userId: req.userId,
+      _id: { $ne: id }, // Exclude the current lead being updated
+      $or: [
+        { email: updateData.email },
+        { phoneNumber: updateData.phoneNumber }
+      ],
+    });
+
+    if (existingLead) {
+      return res.status(StatusCodes.BAD_REQUEST).json({
+        success: false,
+        message: "A lead with this email or phone number already exists in your account.",
+        data: {},
+      });
+    }
+
     const updatedLead = await leadModel.findByIdAndUpdate( { _id: id, userId: req.userId}, { $set: updateData }, { new: true });
     if (!updatedLead) return res
     .status(StatusCodes.NOT_FOUND)

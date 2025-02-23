@@ -2,6 +2,24 @@ import { StatusCodes } from "http-status-codes";
 import leadModel from "../../models/leadModels/lead.js";
 import { leadSchemavalidate } from "../../schema_validation/leadValidation/leadValidate.js";
 
+
+//  get own leads for perticular user
+export const getAllLeads = async (req, res) => {
+  try {
+    const Allleads = await leadModel.find();
+    console.log("allleads", Allleads);
+    
+    res.status(StatusCodes.OK).json({
+      success: true,
+      message: "Getting all leads successfully",
+      data: { Leads: Allleads },
+    });
+  } catch (error) {
+    res.status(StatusCodes.BAD_REQUEST)
+      .json({ success: false, message: "Error fetching leads", data: {} });
+  }
+};
+
 //  get own leads for perticular user
 export const getMyLeads = async (req, res) => {
   try {

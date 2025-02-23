@@ -15,12 +15,10 @@ export const sendOtpMiddleware = async (req, res) => {
     console.log("heloo rohit form sendOtpMiddleware", req.body);
 
     if (!email && !phoneNumber) {
-      return res
-        .status(400)
-        .json({
-          success: false,
-          message: "Email or phone number is required.",
-        });
+      return res.status(400).json({
+        success: false,
+        message: "Email or phone number is required.",
+      });
     }
 
     console.log(
@@ -31,7 +29,7 @@ export const sendOtpMiddleware = async (req, res) => {
 
     const hello = await SendOtpValidator.validateAsync({ phoneNumber, email });
 
-    console.log("after validate", hello, "==>", phoneNumber, email);
+    // console.log("after validate", hello, "==>", phoneNumber, email);
 
     let mailOtp, result;
 
